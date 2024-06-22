@@ -13,12 +13,12 @@ function CreateEvent() {
       };
   return (
     <div style={{ margin: "auto", width: "1000px" }}>
-      <h1>ブログ作成画面</h1>
+      <h1>イベント作成画面</h1>
       <div>
         <Link to="/">TOP</Link>
       </div>
       <div>
-        <Link to="/events">記事一覧画面</Link>
+        <Link to="/events">イベント一覧画面</Link>
       </div>
       <h2>タイトルを入力してください</h2>
      <div>
@@ -37,7 +37,7 @@ function CreateEvent() {
        />
      </div> 
      <div style={{ marginTop: "20px" }}>
-       <button onClick={onClick}>記事を作成する</button>
+       <button onClick={onClick}>イベントを作成する</button>
      </div>     
    </div>
   );
