@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { axiosInstance } from "../utils/axios.js";
 import * as React from 'react';
 import Button from '@mui/material/Button';
+import Header from "../components/header.tsx";
 
 function Event() {
     const [event, setEvent] = useState();
@@ -14,9 +15,10 @@ function Event() {
           setEvent(res.data);
         };
         f();
-      }, [ ]);
+      }, []);
       return (
         <div style={{ margin: "auto", width: "1000px" }}>
+          <Header/>
           <h1>イベント詳細画面</h1>
           <div>
             <Link to="/">TOP</Link>
