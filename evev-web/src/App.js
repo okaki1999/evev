@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import Header from "./components/header.tsx";
 
 function App() {
   return (
     <div style={{ margin: "auto", width: "1000px" }}>
-      <h1>ブログアプリ</h1>
+      <Header title="ブログアプリ"/>
       <div>
        <Link to="/create">記事作成画面</Link>
       </div>

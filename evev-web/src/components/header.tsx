@@ -1,13 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Button from '@mui/material/Button';
+import { AppBar,Container,Box,Button } from '@mui/material';
 
-const Header = () => {
+const Header = ({title}) => {
   return (
-    <div style={{ margin: "auto", width: "1000px" }}>
-      <h1>イベント詳細画面</h1>
+    <AppBar
+    position="static"
+    sx={{
+      backgroundColor: 'white',
+      color: 'black',
+      boxShadow: 'none',
+      py: '12px',
+    }}
+  >
+    <Container maxWidth="lg" sx={{ px: 2 }}>
+    <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+          }}
+        >
+    <Box>
+      <h1>{title}</h1>
+    </Box>
       <div>
-        <Link to="/">TOP</Link>
+        <Link to="/"><Button variant="contained">
+            TOP
+          </Button></Link>
       </div>
       <div>
         <Link to="../create">
@@ -23,7 +43,9 @@ const Header = () => {
           </Button>
         </Link>
       </div>
-    </div>
+    </Box>
+    </Container>
+    </AppBar>
   );
 }
 

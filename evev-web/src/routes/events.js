@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { axiosInstance } from "../utils/axios.js";
+import Header from "../components/header.tsx";
 
 function Events() {
     const [events, setEvents] = useState();
@@ -13,13 +14,8 @@ function Events() {
    }, []);
   return (
     <div style={{ margin: "auto", width: "1000px" }}>
-      <h1>イベント一覧画面</h1>
-      <div>
-        <Link to="/">TOP</Link>
-      </div>
-      <div>
-        <Link to="/create">イベント作成画面</Link>
-      </div>
+      <Header title="イベント一覧"/>
+
       <div>
        <ul>
          {events?.map((b) => (

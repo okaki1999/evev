@@ -1,6 +1,7 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { axiosInstance } from "../utils/axios.js";
+import Header from "../components/header.tsx";
 
 function CreateEvent() {
     const [title, setTitle] = useState("");
@@ -13,13 +14,7 @@ function CreateEvent() {
       };
   return (
     <div style={{ margin: "auto", width: "1000px" }}>
-      <h1>イベント作成画面</h1>
-      <div>
-        <Link to="/">TOP</Link>
-      </div>
-      <div>
-        <Link to="/events">イベント一覧画面</Link>
-      </div>
+      <Header title="イベント作成"/>
       <h2>タイトルを入力してください</h2>
      <div>
        <input
