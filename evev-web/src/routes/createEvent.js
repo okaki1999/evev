@@ -13,8 +13,9 @@ function CreateEvent() {
         navigate("/events", { replace: true });
       };
   return (
-    <div style={{ margin: "auto", width: "1000px" }}>
+    <div>
       <Header title="イベント作成"/>
+      <div style={{ margin: "auto", width: "1000px" }}>
       <h2>タイトルを入力してください</h2>
      <div>
        <input
@@ -33,7 +34,8 @@ function CreateEvent() {
      </div> 
      <div style={{ marginTop: "20px" }}>
        <button onClick={onClick}>イベントを作成する</button>
-     </div>     
+     </div>  
+     </div>   
    </div>
   );
 }

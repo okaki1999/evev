@@ -13,9 +13,9 @@ function Events() {
     f();
    }, []);
   return (
-    <div style={{ margin: "auto", width: "1000px" }}>
+    <div>
       <Header title="イベント一覧"/>
-
+      <div style={{ margin: "auto", width: "1000px" }}>
       <div>
        <ul>
          {events?.map((b) => (
@@ -24,6 +24,7 @@ function Events() {
            </Link>
          ))}
        </ul>
+     </div>
      </div>
     </div>
   );

@@ -7,44 +7,43 @@ const Header = ({title}) => {
     <AppBar
     position="static"
     sx={{
-      backgroundColor: 'white',
-      color: 'black',
+      backgroundColor: '#64b5f6',
+      color: '',
       boxShadow: 'none',
-      py: '12px',
+      py: '1px',
     }}
-  >
-    <Container maxWidth="lg" sx={{ px: 2 }}>
-    <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-          }}
-        >
-    <Box>
-      <h1>{title}</h1>
-    </Box>
-      <div>
-        <Link to="/"><Button variant="contained">
-            TOP
-          </Button></Link>
-      </div>
-      <div>
-        <Link to="../create">
-          <Button variant="contained">
-            イベント作成画面
-          </Button>
-        </Link>
-      </div>
-      <div>
-        <Link to="/events">
-          <Button variant="contained">
-            イベント一覧画面
-          </Button>
-        </Link>
-      </div>
-    </Box>
-    </Container>
+    >
+        <Container sx={{ px: 2 }}>
+            <Box
+                sx={{
+                    display: 'flex',
+                      justifyContent: 'space-between',
+                    alignItems: 'center',
+                }}
+                >
+                <Box >
+                <h1>{title}</h1>
+                </Box>
+                <div style={{ flexGrow: 1 }}></div>
+                <Box >
+                <Link to="/" style={{ textDecoration: 'none', marginRight: '8px' }}>
+                    <Button variant="contained">
+                        TOP
+                    </Button>
+                </Link>
+                <Link to="../create" style={{ textDecoration: 'none', marginRight: '8px' }}>
+                    <Button variant="contained">
+                        イベント作成画面
+                    </Button>
+                </Link>
+                <Link to="/events" style={{ textDecoration: 'none', marginRight: '8px' }}>
+                    <Button variant="contained">
+                        イベント一覧画面
+                    </Button>
+                </Link>
+                </Box>
+            </Box>
+        </Container>
     </AppBar>
   );
 }
