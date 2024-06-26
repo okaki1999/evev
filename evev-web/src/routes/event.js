@@ -24,6 +24,9 @@ function Event() {
             <h2>{event?.title}</h2>
             <h3>本文</h3>
             <p>{event?.contents}</p> 
+            <p>{event?.created_at}</p> 
+            <p>{event?.start_at}</p> 
+            <p>{event?.end_at}</p> 
             <DeleteTodoButton id={event?.id}/>
           </div>
         </div>
