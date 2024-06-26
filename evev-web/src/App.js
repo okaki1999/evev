@@ -1,21 +1,20 @@
-import { Link } from "react-router-dom";
+
 import Header from "./components/header.tsx";
-import { Button } from "@mui/material";
+
+import FullCalendar from '@fullcalendar/react'
+import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
 
 function App() {
   return (
     <div>
       <Header title="EVEV"/>
-      <div style={{ margin: "auto", width: "1000px" }}>
-      <div>
-       <Link to="/create"><Button variant="contained">記事作成画面</Button></Link>
-      </div>
-      <div>
-        <Link to="/events"><Button variant="contained">記事一覧画面</Button></Link>
-      </div>
-      </div>
+      <div style={{ margin: "auto", width: "1000px" }}>    <FullCalendar
+      plugins={[ dayGridPlugin ]}
+      initialView="dayGridMonth"
+    /></div>
+
     </div>
-  );
+  )
 }
 
 export default App;

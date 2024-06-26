@@ -9,6 +9,7 @@ type DeleteTodoButtonProps = {
 
 // Todoを削除するボタン
 const DeleteTodoButton = ({ id }: DeleteTodoButtonProps) => {
+    //削除後のルート
   const navigate = useNavigate();
 
   // Todoを削除する関数
