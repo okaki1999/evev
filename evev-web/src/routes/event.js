@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { axiosInstance } from "../utils/axios.js";
 import * as React from 'react';
 import Header from "../components/header.tsx";
+import DeleteTodoButton from "../components/DeleteTodoButton.tsx";
+
 
 function Event() {
     const [event, setEvent] = useState();
@@ -22,6 +24,7 @@ function Event() {
             <h2>{event?.title}</h2>
             <h3>本文</h3>
             <p>{event?.contents}</p> 
+            <DeleteTodoButton id={event?.id}/>
           </div>
         </div>
       );

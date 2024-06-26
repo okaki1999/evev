@@ -5,7 +5,7 @@ import { Button } from "@mui/material";
 function App() {
   return (
     <div>
-      <Header title="ブログアプリ"/>
+      <Header title="EVEV"/>
       <div style={{ margin: "auto", width: "1000px" }}>
       <div>
        <Link to="/create"><Button variant="contained">記事作成画面</Button></Link>

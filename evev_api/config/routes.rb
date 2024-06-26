@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get '/events/:id', to: 'events#show'
   # 記事作成
   post '/events', to: 'events#create'
+
+  delete '/events/:id', to: 'events#destroy'
   # Defines the root path route ("/")
   # root "articles#index"
 end
