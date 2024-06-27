@@ -55,6 +55,7 @@ function CreateEvent() {
                     value={start_at}
                     onChange={(e) => setStartAt(e.target.value)}
                     InputLabelProps={{ shrink: true }}
+                    inputProps={{ step: 900 }}
                 />
                 <TextField
                     label="終了日時"
@@ -64,6 +65,7 @@ function CreateEvent() {
                     value={end_at}
                     onChange={(e) => setEndAt(e.target.value)}
                     InputLabelProps={{ shrink: true }}
+                    inputProps={{ step: 900 }}
                 />
                 <Button
                     variant="contained"
