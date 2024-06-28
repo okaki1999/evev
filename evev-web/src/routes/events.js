@@ -23,7 +23,7 @@ function Events() {
        <ul>
          {events?.map((b) => (
           <Card variant="outlined">
-           <Link to={`/events/${b.id}`} key={b.id}>
+           <Link to={`/events/${b.id}`} underline="none" key={b.id}>
              <li><h1>{b.title}</h1></li>
            </Link>
           </Card>

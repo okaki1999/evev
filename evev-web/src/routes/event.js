@@ -4,6 +4,7 @@ import { axiosInstance } from "../utils/axios.js";
 import * as React from 'react';
 import Header from "../components/header.tsx";
 import DeleteTodoButton from "../components/DeleteTodoButton.tsx";
+import { Card } from "@mui/material";
 
 
 function Event() {
@@ -21,6 +22,8 @@ function Event() {
         <div>
           <Header title="イベント詳細"/>  
           <div style={{ margin: "auto", width: "1000px" }}>
+            <Card>
+            <div style={{ margin: '20px 0' }}>
             <h2>{event?.title}</h2>
             <h3>本文</h3>
             <p>{event?.contents}</p> 
@@ -28,6 +31,8 @@ function Event() {
             <p>{event?.start_at}</p> 
             <p>{event?.end_at}</p> 
             <DeleteTodoButton id={event?.id}/>
+            </div>
+            </Card>
           </div>
         </div>
       );
