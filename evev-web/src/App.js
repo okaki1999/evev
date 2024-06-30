@@ -30,12 +30,14 @@ function App() {
     start: event.start_at,
     end: event.end_at // 仮にcreated_atを使用していますが、実際のデータに応じて修正してください
   }));
+  
 
   return (
     <div>
       <Header title="EVEV"/>
       <div style={{ margin: "auto", width: "1000px" }}>
         <FullCalendar
+        
           plugins={[ dayGridPlugin ]}
           initialView="dayGridMonth"
           locales={[jaLocale]}

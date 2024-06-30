@@ -47,6 +47,7 @@ function CreateEvent() {
                     value={contents}
                     onChange={(e) => setContents(e.target.value)}
                 />
+                
                 <TextField
                     label="開始日時"
                     type="datetime-local"

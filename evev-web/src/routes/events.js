@@ -19,7 +19,6 @@ function Events() {
     <div>
       <Header title="イベント一覧"/>
       <div style={{ margin: "auto", width: "1000px" }}>
-      
        <ul>
          {events?.map((b) => (
           <Card variant="outlined">
